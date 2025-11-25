@@ -1,0 +1,40 @@
+public class Main {
+    public static void main(String[] args) {
+
+        // 1. Объявление и инициализация переменных разных типов
+        byte temperature = 25;                    // Температура воздуха
+        short populationSmallTown = 12000;        // Население маленького города
+        int year = 2025;                          // Текущий год
+        long worldPopulation = 8000000000L;       // Население мира
+        float price = 19.99f;                     // Цена товара
+        double distance = 149_600_000.50;         // Расстояние до солнца (км)
+        boolean isJavaFun = true;                 // Логическое значение
+        char letter = 'A';                        // Символьная переменная
+
+        // 2. Вывод переменных
+        System.out.println("Температура: " + temperature);
+        System.out.println("Население города: " + populationSmallTown);
+        System.out.println("Текущий год: " + year);
+        System.out.println("Население мира: " + worldPopulation);
+        System.out.println("Цена товара: " + price);
+        System.out.println("Расстояние до солнца: " + distance);
+        System.out.println("Java — это весело? " + isJavaFun);
+        System.out.println("Буква: " + letter);
+
+        // 3. Явное приведение long → int
+        int reducedPopulation = (int) worldPopulation; 
+        System.out.println("Преобразованное long → int: " + reducedPopulation);
+
+        // Комментарий: здесь произойдёт потеря данных,
+        // потому что значение worldPopulation превышает диапазон int.
+
+        // 4. Дополнительно: вывод нескольких символов на основе 'A'
+        System.out.println("Последовательные символы:");
+        char c1 = letter;
+        char c2 = (char) (letter + 1);
+        char c3 = (char) (letter + 2);
+        char c4 = (char) (letter + 3);
+
+        System.out.println(c1 + " " + c2 + " " + c3 + " " + c4);
+    }
+}
